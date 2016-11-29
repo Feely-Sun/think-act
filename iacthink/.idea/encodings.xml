@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dalgen/biz/gen.bat" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dalgen/biz/gen.groovy" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dalgen/biz/gen.sh" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dalgen/biz/gen_config.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dalgen/biz/pom.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dalgen/biz/tables/student.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pj2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/dal.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/service.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/transaop.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/vmconfig.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

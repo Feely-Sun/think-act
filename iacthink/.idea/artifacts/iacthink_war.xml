@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="iacthink:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="think-act.war">
+      <element id="artifact" artifact-name="iacthink:war exploded" />
+    </root>
+  </artifact>
+</component>

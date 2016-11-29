@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-autowire="byName">
+
+    <bean id="mydataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName">
+            <value>com.mysql.jdbc.Driver</value>
+        </property>
+        <property name="url">
+            <value>jdbc:mysql://127.0.0.1:3306/springmvc?useUnicode=true&amp;characterEncoding=UTF-8</value>
+        </property>
+        <property name="username">
+            <value>root</value>
+        </property>
+        <property name="password">
+            <value>work@alipay</value>
+        </property>
+    </bean>
+
+    <bean id="myTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" >
+            <ref bean="mydataSource" />
+        </property>
+        <property name="nestedTransactionAllowed" value="true" />
+    </bean>
+
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate" >
+        <property name="transactionManager">
+            <ref bean="myTransactionManager" />
+        </property>
+        <property name="propagationBehavior" value="6"/>
+    </bean>
+
+
+    <bean id="iacthinkSqlMapClientDAO" abstract="true">
+        <property name="dataSource">
+            <ref bean="mydataSource" />
+        </property>
+        <property name="sqlMapClient">
+            <ref bean="mySqlMapClient" />
+        </property>
+    </bean>
+
+    <bean id="mySqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="dataSource" ref="mydataSource" />
+        <property name="configLocation">
+            <value>classpath:sqlmap/iacthink/iacthink-sqlmap-config.xml</value>
+        </property>
+    </bean>
+
+
+
+
+</beans>

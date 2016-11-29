@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE table SYSTEM "http://sources.alipay.net/svn/dtd/table-config-1.0.dtd">
+
+<table sqlname="student">
+	<!-- 不需要配置的列请删除,一般只有Money类型的column需要配置: com.iwallet.biz.common.util.money.Money -->
+	
+	<sql id="Student.columns">
+		id, s_no, s_name, s_age 
+	</sql>
+	
+	<operation name="insert" paramtype="object">
+		<sql>
+			INSERT INTO student (
+	        	id ,s_no ,s_name ,s_age 
+	        ) VALUES (
+	        	? ,? ,? ,?         
+	        )
+		</sql>		
+	</operation>
+
+	<operation name="delete">
+		<sql>
+	        DELETE FROM student WHERE
+	        id = ? 
+		</sql>
+	</operation>
+	
+	<operation name="update" paramtype="object">
+		<sql>
+	        UPDATE student SET
+		        s_no = ? ,s_name = ? ,s_age = ? 
+	        WHERE 
+	        	id = ? 
+		</sql>					
+	</operation>
+
+	<operation name="queryById" multiplicity="one">
+		<sql>
+	    	SELECT
+		    <include refid="Student.columns"/>
+	        FROM student 
+	        WHERE 
+		        id = ? 
+		</sql>
+	</operation>
+
+	
+	<operation name="findPage" multiplicity="paging">
+		<sql>
+			SELECT 
+			<include refid="Student.columns"/>
+			FROM student 
+		</sql>
+	</operation>
+
+</table>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap>
+
+    
+    <resultMap id="RM.Student" class="com.iacthink.dal.dataobject.StudentDO">
+		<result property="id" column="id" javaType="int" jdbcType="INTEGER"  nullValue="0"  />
+		<result property="sno" column="s_no" javaType="java.lang.String" jdbcType="VARCHAR"  />
+		<result property="sname" column="s_name" javaType="java.lang.String" jdbcType="VARCHAR"  />
+		<result property="sage" column="s_age" javaType="int" jdbcType="INTEGER"  nullValue="0"  />
+    </resultMap>
+    
+	<sql id="Student.columns">
+		id, s_no, s_name,s_age
+	</sql>
+		
+
+	
+	<select id="iacthink.Student.queryAll" resultMap="RM.Student" >
+    	SELECT  /*iacthink.Student.queryAll*/ 
+			<include refid="Student.columns"/>
+			FROM student
+	</select>	
+
+	    
+	
+	
+    
+	
+	
+    
+	<insert id="iacthink.Student.insert">
+		insert into student(id,s_no,s_name,s_age)values(#id#,#sno#,#sname#,#sage#)
+		<selectKey resultClass="int" type="post" keyProperty="id" >
+            select last_insert_id()
+    	</selectKey>        
+	</insert>
+
+</sqlMap>
+

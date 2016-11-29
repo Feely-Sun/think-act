@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-autowire="byName">
+
+
+    <!--<bean id="testManager" class="manager.impl.TestManagerImpl" />-->
+
+    <!--<bean id="calManager"  class="manager.CalManager" />-->
+
+    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
+
+
+    <tx:annotation-driven transaction-manager="myTransactionManager"/>
+
+    <!-- 定义个通知，指定事务管理器 -->
+    <!--<tx:advice id="txAdvice" transaction-manager="myTransactionManager">-->
+        <!--<tx:attributes>-->
+            <!--<tx:method name="insert*" propagation="NESTED" read-only="false"/>-->
+        <!--</tx:attributes>-->
+    <!--</tx:advice>-->
+
+    <!--<aop:config>-->
+        <!--<aop:pointcut id="serviceMethods" expression="execution(* com.iacthink.service..*.*(..))"/>-->
+        <!--<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>-->
+    <!--</aop:config>-->
+
+
+</beans>

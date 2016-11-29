@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE table SYSTEM "http://sources.alipay.net/svn/dtd/table-config-1.0.dtd">
+
+<table sqlname="student">
+	<sql id="Student.columns">
+		id, s_no, s_name,s_age
+	</sql>
+    
+	<operation name="queryAll" multiplicity="many">
+		<sql>
+			SELECT 
+			<include refid="Student.columns"/>
+			FROM student
+		</sql>
+	</operation>
+
+
+	<operation name="insert"  paramtype="object">
+		<sql>
+			insert into student(id,s_no,s_name,s_age)values(?,?,?,?)
+		</sql>
+	</operation>
+
+</table>

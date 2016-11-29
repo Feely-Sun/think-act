@@ -1,0 +1,19 @@
+<html>
+<head>
+    #set($pageEncoding="UTF-8" )
+</head>
+<body>
+hello ${message}
+
+<div>
+    <script type="text/javascript">
+        function go(){
+            alert("test")
+
+        }
+    </script>
+
+    <input type="button" value="测试" name="Btn" width="50" height="50" onclick="go()"/>
+</div>
+</body>
+</html>
