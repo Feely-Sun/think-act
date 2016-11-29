@@ -4,17 +4,12 @@
  * Powered By [rapid-generator]
  */
 package com.iacthink.dal.daointerface;
+
+import java.util.List;
+
 import org.springframework.dao.DataAccessException;
-import com.iacthink.dal.operation.student.*;
-import com.iacthink.dal.dataobject.*;
 
-
-import java.io.*;
-import java.net.*;
-import java.util.*;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
+import com.iacthink.dal.dataobject.StudentDO;
 
 
 

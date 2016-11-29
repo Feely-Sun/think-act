@@ -1,14 +1,6 @@
 package com.iacthink.proxy;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Proxy;
-import java.net.URL;
-import java.util.Enumeration;
 import java.util.Map;
 
 /**

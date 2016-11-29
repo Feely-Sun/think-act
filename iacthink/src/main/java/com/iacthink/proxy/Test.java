@@ -1,12 +1,12 @@
 package com.iacthink.proxy;
 
-import sun.misc.CompoundEnumeration;
-import sun.misc.Resource;
-import sun.misc.URLClassPath;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Enumeration;
+
+import sun.misc.CompoundEnumeration;
+import sun.misc.Resource;
+import sun.misc.URLClassPath;
 
 /**
  * @author sunzihan

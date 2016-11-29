@@ -11,12 +11,13 @@
  * fail()	 A helper to throw MojoExecutionException
  **/
 
-import cn.org.rapid_framework.generator.*;
-import cn.org.rapid_framework.generator.util.*;
-import cn.org.rapid_framework.generator.ext.tableconfig.model.*;
-import cn.org.rapid_framework.generator.provider.db.model.*;
-import cn.org.rapid_framework.generator.ext.tableconfig.builder.TableConfigXmlBuilder;
-import cn.org.rapid_framework.generator.provider.db.sql.model.Sql;
+
+import cn.org.rapid_framework.generator.*
+import cn.org.rapid_framework.generator.ext.tableconfig.builder.TableConfigXmlBuilder
+import cn.org.rapid_framework.generator.ext.tableconfig.model.*
+import cn.org.rapid_framework.generator.provider.db.model.*
+import cn.org.rapid_framework.generator.provider.db.sql.model.Sql
+import cn.org.rapid_framework.generator.util.*
 
 main();
 
@@ -38,10 +39,10 @@ def loadDefaultGeneratorProperties() {
 	GeneratorProperties.properties.put("generator_sourceEncoding","GBK");
 	GeneratorProperties.properties.put("generator_outputEncoding","GBK");
 	GeneratorProperties.properties.put("gg_isOverride","true");
-	//½«±íÃû´Ó¸´Êý×ª»»Îªµ¥Êý 
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ 
 	GeneratorProperties.properties.put("tableNameSingularize","true");
 	if(pom != null) {
-		GeneratorProperties.load("${pom.basedir}/"+System.getProperty("generatorConfigFile")); //¼ÓÔØÅäÖÃÎÄ¼þ
+		GeneratorProperties.load("${pom.basedir}/"+System.getProperty("generatorConfigFile")); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 		GeneratorProperties.properties.put("basedir",pom.basedir);
 		GeneratorProperties.properties.putAll(pom.properties);
 	}else {
@@ -157,7 +158,7 @@ public class Helper {
 		}else {
 			TableConfig tableConfig = tableConfigSet.getBySqlName(tableSqlName);
 			if(tableConfig == null) {
-				throw new RuntimeException("¸ù¾Ý±íÃû:${tableSqlName}Ã»ÓÐÕÒµ½ÅäÖÃÎÄ¼þ");
+				throw new RuntimeException("ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½:${tableSqlName}Ã»ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½");
 			}
 			return Arrays.asList(tableConfig);
 		}

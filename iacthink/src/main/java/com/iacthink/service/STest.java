@@ -1,14 +1,11 @@
 package com.iacthink.service;
 
-import com.iacthink.dal.daointerface.StudentDAO;
-import com.iacthink.dal.dataobject.StudentDO;
-import org.springframework.beans.BeanUtils;
-import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
+
+import com.iacthink.dal.daointerface.StudentDAO;
+import com.iacthink.dal.dataobject.StudentDO;
 
 /**
  * @author sunzihan

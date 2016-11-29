@@ -1,9 +1,9 @@
 package com.iacthink.proxy;
 
-import sun.misc.ProxyGenerator;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import sun.misc.ProxyGenerator;
 
 /**
  * @author sunzihan

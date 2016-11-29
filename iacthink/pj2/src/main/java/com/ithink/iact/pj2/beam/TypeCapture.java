@@ -1,9 +1,9 @@
 package com.ithink.iact.pj2.beam;
 
+import static com.google.common.base.Preconditions.checkArgument;
+
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-
-import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * @author sunzihan

@@ -7,23 +7,13 @@
 package com.iacthink.dal.ibatis;
 
 
-import com.iacthink.dal.dataobject.*;
-
-
-import java.io.*;
-import java.net.*;
-import java.util.*;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
-
+import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
 
-import com.iacthink.dal.dataobject.StudentDO;
 import com.iacthink.dal.daointerface.StudentDAO;
+import com.iacthink.dal.dataobject.StudentDO;
 
 /**
  * StudentDAO

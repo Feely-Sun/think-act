@@ -1,11 +1,12 @@
 package com.iacthink.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.ui.ModelMap;
@@ -14,9 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.iacthink.dal.dataobject.StudentDO;
 import com.iacthink.service.STest;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author sunzihan
